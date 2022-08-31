@@ -5,7 +5,7 @@ import (
 	"mncTestApp/config"
 	"mncTestApp/delivery/middleware"
 	"mncTestApp/logger"
-	"mncTestApp/delivery"
+	"mncTestApp/delivery/login"
 )
 import "github.com/gin-gonic/gin"
 
@@ -35,7 +35,7 @@ func (p *appServer) Run() {
 func Server() AppServer {
 	r := gin.Default()
 	r.SetTrustedProxies([]string{""})
-	r.GET("/login", delivery.Login())
+	r.GET("/login", login.Login())
 
 	c := config.NewConfig()
 	return &appServer{

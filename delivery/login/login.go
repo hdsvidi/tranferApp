@@ -1,4 +1,4 @@
-package controller
+package login
 
 import "mncTestApp/usecase"
 import "mncTestApp/delivery/apprequest"
